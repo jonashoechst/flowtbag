@@ -106,6 +106,8 @@ func main() {
 	p.Setfilter("ip and (tcp or udp)")
 
 	log.Println("Starting Flowtbag")
+
+    ExportHeader()
 	startTime = time.Now()
 	for rawpkt := p.Next(); rawpkt != nil; rawpkt = p.Next() {
 		process(rawpkt)

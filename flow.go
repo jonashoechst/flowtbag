@@ -347,6 +347,10 @@ func (f *Flow) Export() {
 	fmt.Println()
 }
 
+func ExportHeader() {
+    fmt.Println("srcip,srcport,dstip,dstport,proto,total_fpackets,total_fvolume,total_bpackets,total_bvolume,min_fpktl,mean_fpktl,max_fpktl,std_fpktl,min_bpktl,mean_bpktl,max_bpktl,std_bpktl,min_fiat,mean_fiat,max_fiat,std_fiat,min_biat,mean_biat,max_biat,std_biat,duration,min_active,mean_active,max_active,std_active,min_idle,mean_idle,max_idle,std_idle,sflow_fpackets,sflow_fbytes,sflow_bpackets,sflow_bbytes,fpsh_cnt,bpsh_cnt,furg_cnt,burg_cnt,total_fhlen,total_bhlen,dscp")
+}
+
 func (f *Flow) CheckIdle(time int64) bool {
 	if (time - f.getLastTime()) > FLOW_TIMEOUT {
 		return true
