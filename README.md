@@ -78,48 +78,48 @@ system is designed.
 
 ### Features
 
-    srcip STRING
-    srcport NUMERIC
-    dstip STRING
-    dstport NUMERIC
-    proto NUMERIC
-    total_fpackets NUMERIC
-    total_fvolume NUMERIC
-    total_bpackets NUMERIC
-    total_bvolume NUMERIC
-    min_fpktl NUMERIC
-    mean_fpktl NUMERIC
-    max_fpktl NUMERIC
-    std_fpktl NUMERIC
-    min_bpktl NUMERIC
-    mean_bpktl NUMERIC
-    max_bpktl NUMERIC
-    std_bpktl NUMERIC
-    min_fiat NUMERIC
-    mean_fiat NUMERIC
-    max_fiat NUMERIC
-    std_fiat NUMERIC
-    min_biat NUMERIC
-    mean_biat NUMERIC
-    max_biat NUMERIC
-    std_biat NUMERIC
-    duration NUMERIC
-    min_active NUMERIC
-    mean_active NUMERIC
-    max_active NUMERIC
-    std_active NUMERIC
-    min_idle NUMERIC
-    mean_idle NUMERIC
-    max_idle NUMERIC
-    std_idle NUMERIC
-    sflow_fpackets NUMERIC
-    sflow_fbytes NUMERIC
-    sflow_bpackets NUMERIC
-    sflow_bbytes NUMERIC
-    fpsh_cnt NUMERIC
-    bpsh_cnt NUMERIC
-    furg_cnt NUMERIC
-    burg_cnt NUMERIC
-    total_fhlen NUMERIC
-    total_bhlen NUMERIC
-    dscp NUMERIC
+    srcip STRING                source IPv4 (sent SYN) 
+    srcport NUMERIC             source port
+    dstip STRING                destination IPv4
+    dstport NUMERIC             destination Port 
+    proto NUMERIC               protocol in IP Header: 6: TCP, 17: UDP
+    total_fpackets NUMERIC      forward packets count
+    total_fvolume NUMERIC       forward packets volume
+    total_bpackets NUMERIC      back packets count
+    total_bvolume NUMERIC       back packets sum
+    min_fpktl NUMERIC           forward packets length: min
+    mean_fpktl NUMERIC          forward packets length: mean
+    max_fpktl NUMERIC           forward packets length: max
+    std_fpktl NUMERIC           forward packets length: standard deviation
+    min_bpktl NUMERIC           back packets length: min
+    mean_bpktl NUMERIC          back packets length: mean
+    max_bpktl NUMERIC           back packets length: max
+    std_bpktl NUMERIC           back packets length: standard deviation
+    min_fiat NUMERIC            send interarrival time: min
+    mean_fiat NUMERIC           send interarrival time: mean
+    max_fiat NUMERIC            send interarrival time: max
+    std_fiat NUMERIC            send interarrival time: standard deviation
+    min_biat NUMERIC            received inter arrival time: min
+    mean_biat NUMERIC           received inter arrival time: mean
+    max_biat NUMERIC            received inter arrival time: max
+    std_biat NUMERIC            received inter arrival time: standard deviation
+    duration NUMERIC            connection duration (syn to fin)
+    min_active NUMERIC          active connection phases: min
+    mean_active NUMERIC         active connection phases: mean
+    max_active NUMERIC          active connection phases: max
+    std_active NUMERIC          active connection phases: standard deviation
+    min_idle NUMERIC            idle connection phases: min
+    mean_idle NUMERIC           idle connection phases: mean
+    max_idle NUMERIC            idle connection phases: max
+    std_idle NUMERIC            idle connection phases: standard deviation
+    sflow_fpackets NUMERIC      forward subflows mean packet count 
+    sflow_fbytes NUMERIC        forward subflows mean packet bytes 
+    sflow_bpackets NUMERIC      back subflows mean packet count 
+    sflow_bbytes NUMERIC        back subflows mean packet bytes 
+    fpsh_cnt NUMERIC            forward push (PSH) count
+    bpsh_cnt NUMERIC            back push count
+    furg_cnt NUMERIC            forward urgent (URG) count
+    burg_cnt NUMERIC            back urgent count
+    total_fhlen NUMERIC         forward packets volume (summed header length)
+    total_bhlen NUMERIC         back packets volume (summed header length)
+    dscp NUMERIC                differentiated services field
