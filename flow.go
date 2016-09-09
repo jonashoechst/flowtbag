@@ -334,7 +334,7 @@ func (f *Flow) Export() {
 		log.Fatalf("duration (%d) < 0", f.f[DURATION])
 	}
 
-	fmt.Printf("%s,%d,%s,%d,%d",
+	fmt.Printf("'%s',%d,'%s',%d,%d",
 		f.srcip,
 		f.srcport,
 		f.dstip,
